@@ -1,0 +1,11 @@
+* {
+
+}
+.app {
+    min-height: 100vh;
+    background-color: #081028
+    ;
+}
+.border {
+    border: 2px solid red;
+}
