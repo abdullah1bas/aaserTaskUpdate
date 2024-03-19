@@ -74,7 +74,7 @@ const HeaderSearch = () => {
             "& .css-1g12qau-MuiSvgIcon-root-MuiNativeSelect-icon, .css-1636szt": {
               color: "#ffffff96",
             },
-            "& .css-19ygod6-MuiNativeSelect-select-MuiInputBase-input-MuiInput-input:not([multiple]) option":
+            "& .css-19ygod6-MuiNativeSelect-select-MuiInputBase-input-MuiInput-input:not([multiple]) option, .css-1gtikml:not([multiple]) option":
               {
                 backgroundColor: "white !important",
                 color: "black !important",
