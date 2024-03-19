@@ -20,22 +20,10 @@ const Overview = ({ data }) => {
         <Typography variant="h6" sx={{ my: 5 }}>
           Overview
         </Typography>
-        <Stack
-          direction={"row"}
-          flexWrap={"wrap"}
-          gap={1}
-          justifyContent={{ xs: "center", sm: "space-between" }}
-        >
+        <Stack direction={"row"} flexWrap={"wrap"} gap={1} justifyContent={{ xs: "center", sm: "space-between" }} >
           {cloneEl}
         </Stack>
-        <Paper
-          sx={{
-            p: 3,
-            backgroundColor: "#0B1739",
-            borderRadius: "10px",
-            mt: 2,
-          }}
-        >
+        <Paper sx={{ p: 3, backgroundColor: "#0B1739", borderRadius: "10px", mt: 2, }} >
           <Stack direction={"row"} justifyContent={"space-between"} sx={{ minWidth: '600px', overflow: 'auto'}}>
             <Typography variant="h6" sx={{ color: "white" }}>
               Patient Visit
@@ -43,7 +31,7 @@ const Overview = ({ data }) => {
             <FormControl>
               <NativeSelect
                 sx={{ color: "#ffffff96 !important", backgroundColor: "#0a1330", p: "3px 8px", borderRadius: 2,
-                  "& .css-1g12qau-MuiSvgIcon-root-MuiNativeSelect-icon": {
+                  "& .css-1g12qau-MuiSvgIcon-root-MuiNativeSelect-icon, .css-1636szt": {
                     color: "#ffffff96",
                   },
                   "& .css-19ygod6-MuiNativeSelect-select-MuiInputBase-input-MuiInput-input:not([multiple]) option":

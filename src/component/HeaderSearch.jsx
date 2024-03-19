@@ -1,14 +1,6 @@
 import { MicNone } from "@mui/icons-material";
 import SearchIcon from "@mui/icons-material/Search";
-import {
-  Box,
-  FormControl,
-  IconButton,
-  InputBase,
-  NativeSelect,
-  Stack,
-  styled,
-} from "@mui/material";
+import { Box, FormControl, IconButton, InputBase, NativeSelect, Stack, styled } from "@mui/material";
 import { alpha } from "@mui/material/styles";
 
 const Search = styled("div")(({ theme }) => ({
@@ -55,22 +47,11 @@ const HeaderSearch = () => {
   return (
     <Stack
       direction={"row"}
-      sx={{
-        width: `calc(100% - 350px)`,
-        alignItems: "center",
-        justifyContent: "space-between",
-      }}
-    >
+      sx={{ width: `calc(100% - 350px)`, alignItems: "center", justifyContent: "space-between", mb: 1}} >
       <Box />
 
       <Search
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          height: "50px",
-        }}
-      >
+        sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "50px" }} >
         <SearchIconWrapper sx={{ color: "white !important" }}>
           <SearchIcon sx={{ color: "white !important", flexGrow: 1 }} />
         </SearchIconWrapper>
@@ -90,7 +71,7 @@ const HeaderSearch = () => {
             color: "#ffffff96 !important",
             flexGrow: 1,
             minWidth: `120px`,
-            "& .css-1g12qau-MuiSvgIcon-root-MuiNativeSelect-icon": {
+            "& .css-1g12qau-MuiSvgIcon-root-MuiNativeSelect-icon, .css-1636szt": {
               color: "#ffffff96",
             },
             "& .css-19ygod6-MuiNativeSelect-select-MuiInputBase-input-MuiInput-input:not([multiple]) option":

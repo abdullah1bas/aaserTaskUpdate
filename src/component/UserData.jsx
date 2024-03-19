@@ -39,7 +39,7 @@ const UserData = ({data}) => {
                     flex:1,
                     p: "3px 8px",
                     borderRadius: 2,
-                    "& .css-1g12qau-MuiSvgIcon-root-MuiNativeSelect-icon": {
+                    "& .css-1g12qau-MuiSvgIcon-root-MuiNativeSelect-icon, .css-1636szt": {
                       color: "#ffffff96",
                     },
                     "& .css-19ygod6-MuiNativeSelect-select-MuiInputBase-input-MuiInput-input:not([multiple]) option":

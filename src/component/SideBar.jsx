@@ -1,19 +1,24 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/prop-types */
 // @ts-nocheck
-import { Box, Button, Divider, Toolbar, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Button, Divider, Toolbar, useMediaQuery , styled} from "@mui/material";
+import MuiDrawer from "@mui/material/Drawer";
 import { useNavigate } from "react-router-dom";
 import logo from "../../public/images/White-logo.png";
 import React from "react";
-import Drawer from "./Drawer";
 import ButtonLink from "./ButtonLink";
 import UserData from "./UserData";
 
+const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open", })(
+  ({ theme }) => ({
+    width: `280px`, flexShrink: 0, whiteSpace: "nowrap", boxSizing: "border-box", backgroundColor: 'red !important',
+  })
+);
 
 // eslint-disable-next-line react/prop-types
 const SideBar = ({ data, DrawerHeader }) => {
   console.log('sideBar Page')
-  const theme = useTheme();
   const navigate = useNavigate();
   const linksList = data.linksItemWeb.map((link, index) =>
     React.cloneElement(<ButtonLink />, {
@@ -39,7 +44,6 @@ const SideBar = ({ data, DrawerHeader }) => {
           },
           boxShadow: "1px 0px rgba(0, 0, 0, 0.5)",
         }}
-        // anchor={anchor}
         variant="permanent"
       >
         <Toolbar sx={{ mt: 3 }}>
@@ -66,9 +70,7 @@ const SideBar = ({ data, DrawerHeader }) => {
         <ButtonLink link={data.linksItemAdmin[0]} changeButton={false} />
         <ButtonLink link={data.linksItemAdmin[1]} changeButton={true} />
 
-        {useMediaQuery("(max-width:1201px)") && (
-          <UserData data={data} />
-        )}
+        {useMediaQuery("(max-width:1201px)") && ( <UserData data={data} />)}
       </Drawer>
     );
 };
