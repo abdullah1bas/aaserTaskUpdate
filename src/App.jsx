@@ -22,13 +22,9 @@ function App({data}) {
   console.log("App Page");
 
   return (
-    <Stack
-      direction={"row"}
-      className="app"
-      style={{ backgroundColor: "#081028 !important" }}
-    >
+    <Stack direction={"row"} className="app" >
       <SideBar {...{data, DrawerHeader}}/>
-      <Container fixed component="main" sx={{  p: 3, pr: 0, color: 'white' , justifyContent:'center',flexWrap: 'nowrap'}}>
+      <Container className="main" fixed component="main">
         <div>
           <HeaderSearch />
           <Outlet />

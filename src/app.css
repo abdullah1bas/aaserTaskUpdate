@@ -3,9 +3,15 @@
 }
 .app {
     min-height: 100vh;
-    background-color: #081028
-    ;
+    background-color: #081028;
 }
 .border {
     border: 2px solid red;
+}
+.main {
+    padding: 24px;
+    padding-right: 0;
+    color: #fff;
+    justify-content: center;
+    flex-wrap: nowrap;
 }

@@ -1,18 +1,13 @@
 /* eslint-disable react/prop-types */
 import { Accordion, AccordionSummary, Avatar, Box, Button, ListItemButton, ListItemText, Stack, Tooltip, Typography, } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-
 import { useCallback, useState } from "react";
 import { ExpandMore } from "@mui/icons-material";
+import './all-component.css'
 
 const ButtonLink = ({ link ,changeButton}) => {
   const [expanded, setExpanded] = useState(false);
-  const handleChange = useCallback(
-    (panel) => (event, isExpanded) => {
-      setExpanded(isExpanded ? panel : false);
-    },
-    []
-  );
+  const handleChange = useCallback( (panel) => (event, isExpanded) => { setExpanded(isExpanded ? panel : false); }, []);
   const navigate = useNavigate();
 
   return (
@@ -21,13 +16,8 @@ const ButtonLink = ({ link ,changeButton}) => {
         <Accordion
           expanded={expanded === link.panel}
           onChange={handleChange(link.panel)}
-          sx={{
-            width: "100%",
-            backgroundColor: "#081028 !important",
-            color: "#fff",
-            "& .css-pwcg7p-MuiCollapse-root": {
-              pl: "18px !important",
-            },
+          sx={{ width: "100%", backgroundColor: "#081028 !important", color: "#fff",
+            "& .css-pwcg7p-MuiCollapse-root": { pl: "18px !important", },
           }}
         >
           <AccordionSummary
@@ -35,9 +25,7 @@ const ButtonLink = ({ link ,changeButton}) => {
             aria-controls="panel1-content"
             id="panel1-header"
             sx={{
-              "& .MuiAccordion-region": {
-                display: "flex !important",
-                flexDirection: "column !important",
+              "& .MuiAccordion-region": { display: "flex !important", flexDirection: "column !important",
                 alignItems: "start !important",
               },
             }}
@@ -70,10 +58,8 @@ const ButtonLink = ({ link ,changeButton}) => {
             return (
               <ListItemButton
                 key={index}
+                className="subLink"
                 sx={{
-                  minHeight: 48,
-                  justifyContent: "initial",
-                  borderRadius: 2,
                   backgroundColor:
                     location.pathname == subLink.path
                       ? "#0e1a3d !important"
@@ -93,10 +79,7 @@ const ButtonLink = ({ link ,changeButton}) => {
                 <ListItemText
                   primary={subLink.text}
                   sx={{ opacity:  1,
-                    "& .css-10hburv-MuiTypography-root, .css-yb0lig": {
-                      fontSize: "10px",
-                    },
-                    textTransform: "capitalize",
+                    "& .css-10hburv-MuiTypography-root, .css-yb0lig": { fontSize: "10px", }, textTransform: "capitalize",
                   }}
                 />
               </ListItemButton>

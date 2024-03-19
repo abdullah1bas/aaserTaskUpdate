@@ -24,7 +24,7 @@ const UserData = ({data}) => {
           <Divider sx={{backgroundColor: '#fff', width: 'calc(100% - 20px)', my: 3}}  />
           <DataOptions  data={data}/>
           <Stack direction={'row'} alignItems={'center'} color={'#234c9f'} my={1} >
-            <Typography sx={{mr: 3}}>July 30, 2022</Typography>
+            <Typography sx={{mr: 2}}>July 30, 2022</Typography>
             <Divider sx={{backgroundColor: '#234c9f', width: '60%'}} />
           </Stack>
 

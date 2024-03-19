@@ -21,45 +21,29 @@ const SideBar = ({ data, DrawerHeader }) => {
   console.log('sideBar Page')
   const navigate = useNavigate();
   const linksList = data.linksItemWeb.map((link, index) =>
-    React.cloneElement(<ButtonLink />, {
-      link,
-      key: index,
-      changeButton: false,
+    React.cloneElement(<ButtonLink />, { link, key: index, changeButton: false, 
     })
   );
     return (
       <Drawer
-        sx={{
-          width: {md: '350px',lg: `280px`},
-          flexShrink: 0,
+        sx={{ width: {md: '350px',lg: `280px`}, flexShrink: 0, boxShadow: "1px 0px rgba(0, 0, 0, 0.5)",
           "& .MuiDrawer-paper": {
             width: {md: '350px',lg: `280px`},
             boxSizing: "border-box",
           },
-          ".MuiDrawer-paperAnchorLeft": {
-            backgroundColor: "#081028 !important",
-          },
-          ".MuiDrawer-paperAnchorRight": {
-            backgroundColor: "#081028 !important",
-          },
-          boxShadow: "1px 0px rgba(0, 0, 0, 0.5)",
+          ".MuiDrawer-paperAnchorLeft": { backgroundColor: "#081028 !important", },
         }}
         variant="permanent"
       >
         <Toolbar sx={{ mt: 3 }}>
           <DrawerHeader>
             <Button
-              sx={{
-                "&:hover": {
-                  backgroundColor: "inherit",
-                },
-                padding: 0,
-                height: "64px",
-                width: "180px",
+              sx={{ padding: 0, height: "64px", width: "180px",
+                "&:hover": { backgroundColor: "inherit", },
               }}
               onClick={() => navigate("/")}
             >
-              <img src={logo} alt="" style={{ width: "100%" }} />
+              <img src={logo} alt="my photo" style={{ width: "100%" }} />
             </Button>
           </DrawerHeader>
         </Toolbar>

@@ -1,0 +1,6 @@
+.subLink {
+  min-height: 48px;
+  justify-content: "initial";
+  border-radius: 10px;
+  border-left-width: "18px !important";
+}
