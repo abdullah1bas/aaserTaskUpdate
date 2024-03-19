@@ -54,7 +54,7 @@ const SideBar = ({ data, DrawerHeader }) => {
         <ButtonLink link={data.linksItemAdmin[0]} changeButton={false} />
         <ButtonLink link={data.linksItemAdmin[1]} changeButton={true} />
 
-        {useMediaQuery("(max-width:1201px)") && ( <UserData data={data} />)}
+        {useMediaQuery("(max-width:1201px)") && ( <UserData data={data.userData} />)}
       </Drawer>
     );
 };
